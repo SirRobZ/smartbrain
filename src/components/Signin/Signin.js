@@ -26,12 +26,12 @@ class Signin extends React.Component {
 			})
 		})
 		.then(response => response.json())
-			.then(user => {
-				if (user.id) { //Checks to see if user exists with proper id
-					this.props.loadUser(user);
-					this.props.onRouteChange('home');
-				}
-			})
+		.then(user => {
+			if (user.id) { //Checks to see if user exists with proper id
+				this.props.loadUser(user);
+				this.props.onRouteChange('home');
+			}
+		})
 	}
 
 	render() { 
